@@ -1,7 +1,7 @@
 import { NavLink as Link } from 'react-router-dom';
 import { AuthorizationForm } from './AuthorizationForm';
 import { RegistrationForm } from './RegistrationForm';
-import { Logo } from '@/shared';
+import { NavigationLogo } from '@/shared';
 import clsx from 'clsx';
 import './Authorization.scss';
 
@@ -15,7 +15,10 @@ export const Authorization = ({ activeTab = 'login' }: AuthorizationProps) => {
 
     return (
         <main className="authorization absoluteCentered">
-            <Logo withText />
+            <NavigationLogo
+                withText
+                to="/"
+            />
             <div className="authorization__form bottomBlueBorder block">
                 <div className="authorization__form__tabs">
                     <Link
