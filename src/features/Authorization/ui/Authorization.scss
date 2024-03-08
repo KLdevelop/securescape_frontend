@@ -1,0 +1,70 @@
+@import '/src/constants.scss';
+
+.authorizationForm {
+  // background: #2d2d2e;
+  width: 100%;
+  text-align: center;
+
+  input {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+
+  &__login {
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+  }
+
+  &__buttons {
+    width: 100%;
+
+    button {
+      // display: inline-block;
+      width: 150px;
+      height: 35px;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.authorization {
+  width: 385px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+
+  &__form {
+    padding-top: 10px;
+
+    &__tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    &__tab {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $main-text-color;
+      font-size: 18px;
+      width: 100%;
+      text-decoration: unset;
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+
+      &_active {
+        border-radius: 5px;
+        border-bottom: 2px solid $light-blue;
+      }
+    }
+  }
+}

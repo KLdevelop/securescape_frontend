@@ -1,0 +1,30 @@
+@import '/src/constants.scss';
+
+.button {
+  border-radius: 3px;
+  border: none;
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1.5%);
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  &_light {
+    background-color: #fff;
+
+    &:hover {
+      background-color: darken($color: #fff, $amount: 11%);
+    }
+
+    &:disabled {
+      background-color: $gray;
+      color: darken($color: $main-text-color, $amount: 25%);
+    }
+  }
+}

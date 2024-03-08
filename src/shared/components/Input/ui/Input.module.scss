@@ -1,0 +1,13 @@
+@import '/src/constants.scss';
+
+.input {
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 3px;
+  background: $gray;
+  color: $main-text-color;
+
+  &::placeholder {
+    color: rgba($color: $main-text-color, $alpha: 0.6);
+  }
+}
