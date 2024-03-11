@@ -1,0 +1,65 @@
+@import '/src/shared/constants.scss';
+
+.coursesPage {
+  padding: 30px;
+
+  &__course {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 800px;
+    max-width: calc(100%);
+    padding: 10px 20px;
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__mark {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 10px;
+
+      &_notStarted {
+        background-color: $blue;
+      }
+
+      &_inProcess {
+        background-color: $orange;
+      }
+
+      &_completed {
+        background-color: $green;
+      }
+    }
+
+    &__status {
+      all: unset;
+      margin-left: auto;
+      cursor: pointer;
+
+      * {
+        vertical-align: middle;
+      }
+
+      &__notStarted {
+        color: $blue;
+      }
+
+      &__inProcess {
+        color: $orange;
+      }
+
+      &__completed {
+        color: $green;
+      }
+    }
+
+    &__triangle {
+      margin-left: 10px;
+    }
+  }
+}

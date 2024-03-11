@@ -1,0 +1,34 @@
+@import '/src/shared/constants.scss';
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 10px 30px;
+  border-bottom: 2px solid $light-blue;
+  align-items: center;
+  gap: 30px;
+
+  &__tab {
+    text-decoration: none;
+    color: $main-text-color;
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__rightBlock {
+    width: fit-content;
+    height: min-content;
+    margin-left: auto;
+
+    .darkButton {
+      width: 110px;
+
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+}

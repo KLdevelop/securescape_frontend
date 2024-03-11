@@ -1,0 +1,15 @@
+@import '/src/shared/constants.scss';
+
+.authorizationForm {
+  width: 100%;
+  text-align: center;
+
+  .darkInput {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__login {
+    width: 100%;
+  }
+}

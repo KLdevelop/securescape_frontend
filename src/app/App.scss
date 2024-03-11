@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '/src/shared/constants.scss';
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font-family;
+  font-size: 14px;
+  color: $main-text-color;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $main-font-family;
+}
+
+body {
+  background: $main-background-color;
+}
+
+.borderAndOutlineUnsetted {
+  border: unset;
+  outline: unset;
+}
+
+.bottomBlueBorder {
+  -webkit-box-shadow: 0px 5px 0px 0px $light-blue;
+  -moz-box-shadow: 0px 5px 0px 0px $light-blue;
+  box-shadow: 0px 5px 0px 0px $light-blue;
+}
+
+.block {
+  padding: 35px;
+  border-radius: 10px;
+  background-color: $block-background-color;
+}
+
+.absoluteCentered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin button($background-color, $text-color, $border: none) {
+  border-radius: 3px;
+  border: $border;
+  background-color: $background-color;
+  height: 35px;
+  color: $text-color;
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: darken($color: $background-color, $amount: 11%);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1.5%);
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  &:disabled {
+    background-color: $gray;
+    color: darken($color: #fff, $amount: 25%);
+  }
+}
+
+.lightButton {
+  @include button(#fff, #000);
+}
+
+.darkButton {
+  @include button($main-background-color, #fff, #fff solid 1px);
+}
+
+@mixin input {
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 3px;
+
+  &:focus,
+  &:focus-within {
+    outline: $light-blue solid;
+  }
+}
+
+.input {
+  @include input();
+}
+
+.darkInput {
+  @include input();
+
+  background: $light-gray;
+  color: $main-text-color;
+
+  &::placeholder {
+    color: rgba($color: $main-text-color, $alpha: 0.55);
+  }
+}
