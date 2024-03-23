@@ -1,0 +1,38 @@
+.profileCard {
+  position: relative;
+
+  .h2 {
+    margin: unset;
+    margin-bottom: 25px;
+    padding: unset;
+    text-align: center;
+  }
+
+  &__cornerButton {
+    all: unset;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+
+    img {
+      $size: 35px;
+      width: $size;
+      height: $size;
+    }
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: unset;
+    }
+  }
+}
