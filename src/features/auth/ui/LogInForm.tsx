@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import { AuthFormData } from '../models';
+import { logIn } from '../api';
 import './AuthForm.scss';
 
 export const LogInForm = () => {
@@ -7,19 +9,18 @@ export const LogInForm = () => {
         formState: { isValid },
         getValues,
         handleSubmit,
-    } = useForm();
+    } = useForm<AuthFormData>();
 
-    const authorize = () => {
-        const login: string = getValues('login');
-        const password: string = getValues('password');
+    const onLogIn = async () => {
+        const data = getValues();
 
-        console.log(login, password);
+        await logIn(data);
     };
 
     return (
         <form
             className="authForm"
-            onSubmit={handleSubmit(authorize)}
+            onSubmit={handleSubmit(onLogIn)}
         >
             <input
                 {...register('login', {

@@ -19,7 +19,7 @@ export const AuthPage = () => {
                         className={getTabClass}
                         to="/login"
                     >
-                        Авторизация
+                        Вход
                     </Link>
                     <Link
                         className={getTabClass}
