@@ -1,20 +1,20 @@
 import { NavLink as Link, Outlet } from 'react-router-dom';
 import { NavigationLogo } from '@/shared/ui';
 import clsx from 'clsx';
-import './AuthorizationPage.scss';
+import './AuthPage.scss';
 
 const getTabClass = ({ isActive }: { isActive: boolean }) => {
-    const tabClass = 'authorization__form__tab';
+    const tabClass = 'auth__form__tab';
 
     return clsx(tabClass, isActive && `${tabClass}_active`);
 };
 
-export const AuthorizationPage = () => {
+export const AuthPage = () => {
     return (
-        <main className="authorization absoluteCentered">
+        <main className="auth absoluteCentered">
             <NavigationLogo withText />
-            <div className="authorization__form bottomBlueBorder block">
-                <div className="authorization__form__tabs">
+            <div className="auth__form bottomBlueBorder block">
+                <div className="auth__form__tabs">
                     <Link
                         className={getTabClass}
                         to="/login"
@@ -23,7 +23,7 @@ export const AuthorizationPage = () => {
                     </Link>
                     <Link
                         className={getTabClass}
-                        to="/logup"
+                        to="/signup"
                     >
                         Регистрация
                     </Link>

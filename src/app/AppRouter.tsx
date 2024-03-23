@@ -1,5 +1,5 @@
-import { AuthorizationForm, RegistrationForm } from '@/features/authorization';
-import { AuthorizationPage } from '@/pages/authorization';
+import { LogInForm, SignUpForm } from '@/features/auth';
+import { AuthPage } from '@/pages/auth';
 import { CoursesPage } from '@/pages/courses';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -12,14 +12,14 @@ export const AppRouter = () => {
                     element={<CoursesPage />}
                     index
                 />
-                <Route element={<AuthorizationPage />}>
+                <Route element={<AuthPage />}>
                     <Route
                         path="/login"
-                        element={<AuthorizationForm />}
+                        element={<LogInForm />}
                     />
                     <Route
-                        path="/logup"
-                        element={<RegistrationForm />}
+                        path="/signup"
+                        element={<SignUpForm />}
                     />
                 </Route>
             </Routes>

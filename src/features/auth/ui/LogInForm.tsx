@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
-import './AuthorizationForm.scss';
+import './AuthForm.scss';
 
-export const RegistrationForm = () => {
+export const LogInForm = () => {
     const {
         register,
         formState: { isValid },
@@ -9,32 +9,23 @@ export const RegistrationForm = () => {
         handleSubmit,
     } = useForm();
 
-    const registrate = () => {
+    const authorize = () => {
         const login: string = getValues('login');
         const password: string = getValues('password');
-        const email: string = getValues('email');
 
-        console.log(login, password, email);
+        console.log(login, password);
     };
 
     return (
         <form
-            className="authorizationForm"
-            onSubmit={handleSubmit(registrate)}
+            className="authForm"
+            onSubmit={handleSubmit(authorize)}
         >
             <input
                 {...register('login', {
                     required: true,
                 })}
                 placeholder="Логин"
-                className="borderAndOutlineUnsetted darkInput"
-            />
-            <input
-                {...register('email', {
-                    required: true,
-                })}
-                type="email"
-                placeholder="E-mail"
                 className="borderAndOutlineUnsetted darkInput"
             />
             <input
@@ -48,9 +39,9 @@ export const RegistrationForm = () => {
             <button
                 disabled={!isValid}
                 type="submit"
-                className="authorizationForm__login lightButton"
+                className="authForm__login lightButton"
             >
-                Зарегистрироваться
+                Войти
             </button>
         </form>
     );
