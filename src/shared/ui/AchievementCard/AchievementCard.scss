@@ -1,0 +1,45 @@
+@import '/src/shared/constants.scss';
+
+.achievement {
+  position: relative;
+  $zoom: 0.9;
+  width: calc(228px * $zoom);
+  text-align: center;
+  padding: 10px;
+  padding-top: 85px;
+  background-color: $dark;
+
+  &__icon {
+    $size: calc(128px * $zoom);
+    width: $size;
+    height: $size;
+    position: absolute;
+    bottom: unset;
+    top: calc($size / 3.25);
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__title,
+  &__description {
+    max-height: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &_common {
+    @include bottomShadow($pastel-green, 3px);
+  }
+
+  &_rare {
+    @include bottomShadow($pastel-carrot, 3px);
+  }
+
+  &_mythic {
+    @include bottomShadow($pastel-pink, 3px);
+  }
+}

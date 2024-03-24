@@ -16,48 +16,4 @@
     justify-content: center;
     gap: 50px;
   }
-
-  &__achievement {
-    position: relative;
-    $zoom: 0.9;
-    width: calc(228px * $zoom);
-    text-align: center;
-    padding: 10px;
-    padding-top: 85px;
-    background-color: $dark;
-
-    &__icon {
-      $size: calc(128px * $zoom);
-      width: $size;
-      height: $size;
-      position: absolute;
-      bottom: unset;
-      top: calc($size / 3.25);
-      border-radius: 20px;
-      background-color: white;
-    }
-
-    &__title {
-      margin-bottom: 25px;
-    }
-
-    &__title,
-    &__description {
-      max-height: 62px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &__common {
-    @include bottomShadow($pastel-green, 3px);
-  }
-
-  &__rare {
-    @include bottomShadow($pastel-carrot, 3px);
-  }
-
-  &__mythic {
-    @include bottomShadow($pastel-pink, 3px);
-  }
 }
