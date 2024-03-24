@@ -1,0 +1,37 @@
+@import '/src/shared/constants.scss';
+
+.fullTaskCard {
+  width: 100%;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__term {
+      font-size: 18px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    &__score {
+      &_Beginner,
+      &_Advanced,
+      &_Expert {
+        font-weight: 700;
+      }
+
+      &_Beginner {
+        color: $pastel-green;
+      }
+
+      &_Advanced {
+        color: $pastel-carrot;
+      }
+
+      &_Expert {
+        color: $pastel-pink;
+      }
+    }
+  }
+}

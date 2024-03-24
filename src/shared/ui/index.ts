@@ -5,3 +5,4 @@ export * from './Carousel';
 export * from './RandomCard';
 export * from './CardWithImg';
 export * from './Expander';
+export * from './TaskCard';

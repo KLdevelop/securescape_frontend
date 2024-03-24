@@ -2,6 +2,8 @@ import { LogInForm, SignUpForm } from '@/features/auth';
 import { AuthPage } from '@/pages/auth';
 import { MainPage } from '@/pages/main';
 import { ProfilePage } from '@/pages/profile';
+import { TaskPage } from '@/pages/task';
+import { TasksPage } from '@/pages/tasks';
 import { TopicPage } from '@/pages/topic';
 import { TopicsPage } from '@/pages/topics';
 import { Footer } from '@/widgets/footer';
@@ -36,8 +38,18 @@ export const AppRouter = () => {
                             element={<TopicsPage />}
                         />
                         <Route
-                            path=":id"
+                            path=":topicId"
                             element={<TopicPage />}
+                        />
+                    </Route>
+                    <Route path="tasks">
+                        <Route
+                            index
+                            element={<TasksPage />}
+                        />
+                        <Route
+                            path=":taskId"
+                            element={<TaskPage />}
                         />
                     </Route>
                 </Route>

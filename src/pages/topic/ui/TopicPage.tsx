@@ -3,7 +3,7 @@ import logo from '@/assets/logo-256.png';
 import { CardWithImg, Expander } from '@/shared/ui';
 import { Difficult, Task } from '@/entities/task';
 import { useParams } from 'react-router-dom';
-import { TaskCard } from '@/widgets/tasks';
+import { Tasks } from '@/widgets/tasks';
 import './TopicPage.scss';
 
 const tasks: Task[] = [
@@ -58,14 +58,7 @@ export const TopicPage = () => {
             />
             <Expander title="Теория">Теория</Expander>
             <Expander title="Задачи">
-                <div className="topicPage__tasks">
-                    {tasks.map((task) => (
-                        <TaskCard
-                            key={task.id}
-                            {...task}
-                        />
-                    ))}
-                </div>
+                <Tasks tasks={tasks} />
             </Expander>
         </main>
     );

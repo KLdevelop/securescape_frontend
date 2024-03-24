@@ -1,6 +1,6 @@
 import { Task, keyFromDifficult } from '@/entities/task';
-import './TaskCard.scss';
 import clsx from 'clsx';
+import './TaskCard.scss';
 
 type TaskCardProps = Task;
 
