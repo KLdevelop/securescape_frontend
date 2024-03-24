@@ -1,5 +1,6 @@
 import infotecsLogo from '@/assets/infotecs_logo.png';
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -10,10 +11,15 @@ export const Footer = () => {
             </div>
             <div className="footer__companyInfo">
                 <p>Кейс от комании Infotecs</p>
-                <img
-                    src={infotecsLogo}
-                    alt="infotecs"
-                />
+                <Link
+                    target="_blank"
+                    to="https://infotecs.ru/"
+                >
+                    <img
+                        src={infotecsLogo}
+                        alt="infotecs"
+                    />
+                </Link>
             </div>
         </footer>
     );
