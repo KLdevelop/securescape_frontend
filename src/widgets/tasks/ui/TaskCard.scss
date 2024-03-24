@@ -1,0 +1,77 @@
+@import '/src/shared/constants.scss';
+
+.taskCard {
+  display: flex;
+  align-items: start;
+  width: 480px;
+  height: 200px;
+  background-color: $dark;
+  padding: 20px;
+  font-size: 16px;
+  gap: 20px;
+
+  &_Beginner {
+    @include bottomShadow($pastel-green, 2px);
+  }
+
+  &_Advanced {
+    @include bottomShadow($pastel-carrot, 2px);
+  }
+
+  &_Expert {
+    @include bottomShadow($pastel-pink, 2px);
+  }
+
+  .h3 {
+    margin: unset;
+    padding: unset;
+  }
+
+  &__icon {
+    $size: 100px;
+    width: $size;
+    height: $size;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  &__left {
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100%;
+
+    p {
+      margin: unset;
+    }
+  }
+
+  &__difficult {
+    font-weight: 600;
+    &_Beginner {
+      color: $pastel-green;
+    }
+
+    &_Advanced {
+      color: $pastel-carrot;
+    }
+
+    &_Expert {
+      color: $pastel-pink;
+    }
+  }
+
+  &__category {
+    font-weight: 600;
+  }
+
+  &__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

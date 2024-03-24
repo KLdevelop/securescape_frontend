@@ -1,0 +1,29 @@
+.expander {
+  padding: 25px 50px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .h3 {
+      padding: unset;
+      margin: unset;
+    }
+  }
+
+  &__toggleButton {
+    $size: 30px;
+    width: $size;
+    height: $size;
+
+    img {
+      max-width: $size;
+      max-height: $size;
+    }
+  }
+
+  &__content {
+    padding-top: 30px;
+  }
+}

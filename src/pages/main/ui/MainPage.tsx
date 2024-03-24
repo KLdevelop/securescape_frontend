@@ -68,37 +68,37 @@ export const MainPage = () => {
                 achievements={[
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape1',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.common,
                     },
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape2',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.mythic,
                     },
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape3',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.rare,
                     },
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape4',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.common,
                     },
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape5',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.mythic,
                     },
                     {
                         icon: logo,
-                        title: 'SecureScape',
+                        title: 'SecureScape6',
                         description: 'Образовательная ИБ платформа',
                         rarity: AchievementRarity.rare,
                     },

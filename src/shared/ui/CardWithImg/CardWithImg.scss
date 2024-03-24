@@ -1,0 +1,53 @@
+@import '/src/shared/constants.scss';
+
+.cardWithImg {
+  $border-radis: 40px;
+
+  &_vertical,
+  &_horizontal {
+    border-radius: $border-radis;
+    background-color: $block-background-color;
+  }
+
+  &_vertical {
+    text-align: center;
+    width: 400px;
+    height: 600px;
+
+    &__img {
+      border-top-left-radius: $border-radis;
+      border-top-right-radius: $border-radis;
+      width: 100%;
+    }
+
+    &__description {
+      margin: unset;
+      text-align: left;
+      padding: 0 25px;
+      padding-top: unset;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &_horizontal {
+    height: 250px;
+    display: flex;
+    gap: 20px;
+
+    &__img {
+      border-top-left-radius: $border-radis;
+      border-bottom-left-radius: $border-radis;
+      grid-row: span 2;
+    }
+
+    &__description {
+      overflow: auto;
+      padding-right: 10px;
+    }
+    &__content {
+      max-height: 100%;
+      overflow-y: auto;
+    }
+  }
+}

@@ -12,10 +12,10 @@ export const Header = () => {
             <NavigationLogo withText />
             <nav className={'header__tabs'}>
                 <Link
-                    to="/theory"
+                    to="/topics"
                     className="header__tab"
                 >
-                    Теория
+                    Категории
                 </Link>
                 <Link
                     to="/tasks"

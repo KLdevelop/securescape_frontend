@@ -11,6 +11,7 @@ export const RandomCard = ({ title, onRandom }: RandomCardProps) => {
         <section className="randomCard card bottomBlueBorder">
             <h3 className="h3">{title}</h3>
             <button
+                type="button"
                 className="randomCard__random"
                 onClick={onRandom}
             >

@@ -1,0 +1,13 @@
+.topicPage {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__tasks {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+}

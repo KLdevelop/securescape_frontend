@@ -8,7 +8,10 @@ export const UserProfileInfo = ({ userName, email }: UserProfileProps) => {
     return (
         <div className="userProfileInfo profileCard block">
             <h2 className="h2">Профиль</h2>
-            <button className="profileCard__cornerButton">
+            <button
+                type="button"
+                className="profileCard__cornerButton"
+            >
                 <img
                     src={editIcon}
                     alt="Изменить"
