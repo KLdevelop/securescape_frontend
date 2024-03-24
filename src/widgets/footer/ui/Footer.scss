@@ -1,0 +1,20 @@
+@import '/src/shared/constants.scss';
+
+.footer {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-top: 2px solid $light-blue;
+
+  &__companyInfo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    img {
+      width: 231px;
+    }
+  }
+}

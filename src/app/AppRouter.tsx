@@ -1,6 +1,7 @@
 import { LogInForm, SignUpForm } from '@/features/auth';
 import { AuthPage } from '@/pages/auth';
 import { ProfilePage } from '@/pages/profile';
+import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ export const AppRouter = () => {
                         <>
                             <Header />
                             <Outlet />
+                            <Footer />
                         </>
                     }
                 >
