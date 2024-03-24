@@ -1,0 +1,39 @@
+@import '/src/shared/constants.scss';
+
+.usersRating {
+  max-height: fit-content;
+
+  &__leaderboard {
+    padding: 2px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow-y: auto;
+
+    &__user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 200px;
+
+      p {
+        padding: unset;
+        margin: unset;
+      }
+
+      &:first-child {
+        box-shadow: 0 0 0 2px $pastel-pink;
+      }
+
+      &:nth-child(2) {
+        box-shadow: 0 0 0 2px $pastel-carrot;
+      }
+
+      &:nth-child(3) {
+        box-shadow: 0 0 0 2px $pastel-green;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { LogInForm, SignUpForm } from '@/features/auth';
 import { AuthPage } from '@/pages/auth';
+import { MainPage } from '@/pages/main';
 import { ProfilePage } from '@/pages/profile';
 import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
@@ -21,6 +22,10 @@ export const AppRouter = () => {
                 >
                     <Route
                         index
+                        element={<MainPage />}
+                    />
+                    <Route
+                        path="/profile"
                         element={<ProfilePage />}
                     />
                 </Route>

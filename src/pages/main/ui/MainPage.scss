@@ -1,0 +1,27 @@
+.mainPage {
+  display: grid;
+  //   justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: min-content auto;
+  column-gap: 20px;
+  row-gap: 50px;
+
+  .lastAchievements {
+    grid-column: span 2;
+  }
+
+  .usersRating {
+    grid-column: span 3;
+  }
+
+  .lastActivities {
+    grid-column: span 4;
+  }
+
+  &__random {
+    .randomCard:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

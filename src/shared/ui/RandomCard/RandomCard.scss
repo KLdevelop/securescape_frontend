@@ -1,0 +1,17 @@
+@import '/src/shared/constants.scss';
+
+.randomCard {
+  text-align: center;
+  background-color: $dark;
+  padding: 10px;
+
+  .h3 {
+    margin-top: unset;
+  }
+
+  &__random {
+    all: unset;
+    cursor: pointer;
+    // margin: auto;
+  }
+}
