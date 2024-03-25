@@ -39,7 +39,7 @@ export const Header = () => {
                                 Вход
                             </button>
                         </Link>
-                        <Link to="/logup">
+                        <Link to="/signup">
                             <button
                                 type="button"
                                 className="darkButton"
