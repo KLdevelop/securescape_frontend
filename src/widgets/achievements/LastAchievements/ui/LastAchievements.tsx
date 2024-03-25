@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Achievement } from '@/entities/user';
+import { Achievement } from '@/entities/achievement';
 import { AchievementCard } from '@/shared/ui';
 import { Carousel } from '@/shared/ui';
 import './LastAchievements.scss';

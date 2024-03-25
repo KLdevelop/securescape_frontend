@@ -14,3 +14,17 @@ export type Task = {
     topic: string;
     points: number;
 };
+
+export type TaskFilter = {
+    topicName?: string;
+    difficult?: Difficult;
+};
+
+export type TaskAnswer = {
+    taskId: number;
+    answer: string;
+};
+
+export type TaskAnswerStatus = {
+    correct: boolean;
+};

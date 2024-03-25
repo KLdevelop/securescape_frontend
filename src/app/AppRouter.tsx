@@ -8,14 +8,14 @@ import { TopicPage } from '@/pages/topic';
 import { TopicsPage } from '@/pages/topics';
 import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Outlet, Route, Routes } from 'react-router-dom';
 
 export const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
                 <Route
-                    path="/"
+                    path=""
                     element={
                         <>
                             <Header />
@@ -64,6 +64,6 @@ export const AppRouter = () => {
                     />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 };

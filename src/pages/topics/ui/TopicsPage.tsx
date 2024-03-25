@@ -1,10 +1,11 @@
 import topicImg from '@/assets/crypto.png';
 import { CardWithImg } from '@/shared/ui';
-import { Topic } from '@/entities/topic';
+import { Topic, getAllTopics } from '@/entities/topic';
 import { Link } from 'react-router-dom';
 import './TopicsPage.scss';
+import { useEffect, useState } from 'react';
 
-const topics: Topic[] = [
+const mockTopics: Topic[] = [
     {
         id: 0,
         imageLocation: topicImg,
@@ -29,6 +30,20 @@ const topics: Topic[] = [
 ];
 
 export const TopicsPage = () => {
+    const [topics, setTopics] = useState<Topic[]>(mockTopics);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const topics = await getAllTopics();
+
+                setTopics(topics);
+            } catch (e) {
+                console.log(e);
+            }
+        })();
+    }, []);
+
     return (
         <main className="page topicsPage">
             <h1 className="topicsPage__title">Категории</h1>

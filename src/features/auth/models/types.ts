@@ -1,5 +1,5 @@
 export type AuthFormData = {
-    login: string;
+    userName: string;
     password: string;
 };
 

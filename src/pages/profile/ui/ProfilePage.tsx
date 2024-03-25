@@ -1,12 +1,11 @@
 import { UserProfileInfo, UserStatistics, UserAchievements } from '@/widgets/profile';
+import { AchievementRarity } from '@/entities/achievement';
 import logo from '@/assets/logo-512.png';
 import './ProfilePage.scss';
-import { AchievementRarity } from '@/entities/user';
 
 export const ProfilePage = () => {
     return (
         <main className="profilePage">
-            {/* <div className="profilePage__left"> */}
             <UserProfileInfo
                 userName="4umba2010"
                 email="4umba2010@gmail.com"
@@ -18,8 +17,6 @@ export const ProfilePage = () => {
                 ratingPosition={10}
                 achievementCount={6}
             />
-            {/* </div> */}
-            {/* <div className="profilePage__right"> */}
             <UserAchievements
                 achievements={[
                     {
@@ -60,7 +57,6 @@ export const ProfilePage = () => {
                     },
                 ]}
             />
-            {/* </div> */}
         </main>
     );
 };

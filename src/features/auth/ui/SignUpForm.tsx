@@ -23,7 +23,7 @@ export const SignUpForm = () => {
             onSubmit={handleSubmit(onSignUp)}
         >
             <input
-                {...register('login', {
+                {...register('userName', {
                     required: true,
                 })}
                 placeholder="Логин"

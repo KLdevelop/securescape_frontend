@@ -1,4 +1,4 @@
-import { Achievement } from '@/entities/user';
+import { Achievement } from '@/entities/achievement';
 import clsx from 'clsx';
 import './AchievementCard.scss';
 

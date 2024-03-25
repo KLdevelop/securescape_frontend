@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import { NavigationLogo } from '@/shared/ui';
 import './Header.scss';
+import { useAppSelector } from '@/shared/hooks';
 
 // type HeaderProps = {
 
 // };
 
 export const Header = () => {
+    const { auth } = useAppSelector((state) => state);
+    auth;
+
     return (
         <header className={'header'}>
             <NavigationLogo withText />
@@ -25,22 +29,33 @@ export const Header = () => {
                 </Link>
             </nav>
             <div className={'header__rightBlock'}>
-                <Link to="/login">
-                    <button
-                        type="button"
-                        className="darkButton"
+                {!auth ? (
+                    <>
+                        <Link to="/login">
+                            <button
+                                type="button"
+                                className="darkButton"
+                            >
+                                Вход
+                            </button>
+                        </Link>
+                        <Link to="/logup">
+                            <button
+                                type="button"
+                                className="darkButton"
+                            >
+                                Регистрация
+                            </button>
+                        </Link>
+                    </>
+                ) : (
+                    <Link
+                        to="profile"
+                        className="unsettedButton"
                     >
-                        Вход
-                    </button>
-                </Link>
-                <Link to="/logup">
-                    <button
-                        type="button"
-                        className="darkButton"
-                    >
-                        Регистрация
-                    </button>
-                </Link>
+                        Профиль
+                    </Link>
+                )}
             </div>
         </header>
     );

@@ -1,4 +1,4 @@
-import { UserProgress } from '@/entities/user';
+import { UserProgress } from '@/entities/profile';
 import { AchievementCard } from '@/shared/ui';
 import './UserAchievements.scss';
 

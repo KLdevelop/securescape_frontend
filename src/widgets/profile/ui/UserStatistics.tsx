@@ -1,4 +1,4 @@
-import { UserProgress } from '@/entities/user';
+import { UserProgress } from '@/entities/profile';
 import './profileCard.scss';
 
 type UserStatisticsProps = Omit<UserProgress, 'achievements'> & {

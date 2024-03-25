@@ -1,5 +1,5 @@
 import logo from '@/assets/logo-512.png';
-import { AchievementRarity } from '@/entities/user';
+import { AchievementRarity } from '@/entities/achievement';
 import { LastAchievements } from '@/widgets/achievements';
 import './MainPage.scss';
 import { UsersRating } from '@/widgets/rating';

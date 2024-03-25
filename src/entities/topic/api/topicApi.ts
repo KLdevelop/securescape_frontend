@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { Topic } from '..';
+import { Topic } from '../models';
+import { baseTaskUrl as baseUrl, taskServiceClient } from '@/shared/api';
 
 export const getAllTopics = async (): Promise<Topic[]> => {
-    return (await axios.get<Topic[]>('/api/topics')).data;
+    return (await taskServiceClient.get<{ topics: Topic[] }>(baseUrl + '/topics')).data.topics;
 };
